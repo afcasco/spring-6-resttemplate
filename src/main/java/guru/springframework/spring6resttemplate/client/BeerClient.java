@@ -10,8 +10,6 @@ import java.util.UUID;
  * Created by jt, Spring Framework Guru.
  */
 public interface BeerClient {
-
-
     Page<BeerDTO> listBeers();
 
     Page<BeerDTO> listBeers(String beerName, BeerStyle beerStyle, Boolean showInventory, Integer pageNumber,
@@ -19,11 +17,9 @@ public interface BeerClient {
 
     BeerDTO getBeerById(UUID beerId);
 
+    BeerDTO createBeer(BeerDTO newDto);
 
-    BeerDTO createBeer(BeerDTO beerDTO);
-
-    BeerDTO updateBeer(BeerDTO beerDTO);
+    BeerDTO updateBeer(BeerDTO beerDto);
 
     void deleteBeer(UUID beerId);
-
 }
